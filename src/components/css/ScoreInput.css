@@ -1,0 +1,49 @@
+.ScoreInput {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.ScoreInput input[type="text"],
+.ScoreInput input[type="number"] {
+  padding: 8px 10px;
+  border: 1px solid #d0d5dd;
+  border-radius: 6px;
+  background: #fff;
+  font-size: 14px;
+  outline: none;
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.ScoreInput input[type="text"]::placeholder,
+.ScoreInput input[type="number"]::placeholder {
+  color: #9aa4b2;
+}
+
+.ScoreInput input[type="text"]:focus,
+.ScoreInput input[type="number"]:focus {
+  border-color: #5b8def;
+  box-shadow: 0 0 0 3px rgba(91, 141, 239, 0.15);
+}
+
+.ScoreInput button {
+  padding: 8px 12px;
+  border: 1px solid #2e6ae5;
+  border-radius: 6px;
+  background: #2e6ae5;
+  color: #fff;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.15s ease, transform 0.05s ease;
+}
+
+.ScoreInput button:hover {
+  background: #2558c0;
+}
+
+.ScoreInput button:active {
+  transform: translateY(1px);
+}

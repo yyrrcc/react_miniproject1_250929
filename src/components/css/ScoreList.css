@@ -1,0 +1,72 @@
+.ScoreList {
+  overflow-x: auto; /* 모바일 가로 스크롤 */
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background: #fff;
+}
+
+.ScoreList table {
+  width: 100%;
+  border-collapse: collapse; /* 셀 경계 합치기 */
+}
+
+.ScoreList thead th {
+  background: #f8fafc;
+  color: #111827;
+  text-align: left;
+  font-weight: 700;
+  padding: 10px 12px;
+  font-size: 14px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.ScoreList tbody td {
+  padding: 10px 12px;
+  font-size: 14px;
+  color: #111827;
+  border-bottom: 1px solid #f1f5f9; /* 가로 구분선 */
+}
+
+/* 줄무늬 행 */
+.ScoreList tbody tr:nth-child(even) {
+  background: #f9fafb;
+}
+
+/* 행 hover */
+.ScoreList tbody tr:hover {
+  background: #eef2ff;
+}
+
+/* 삭제 버튼 셀 정렬 */
+.ScoreList td:last-child {
+  width: 1%;
+  white-space: nowrap;
+}
+
+.ScoreList .btn-delete {
+  padding: 6px 10px;
+  border: 1px solid #ef4444;
+  background: #ef4444;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 13px;
+  cursor: pointer;
+  /* transition: background 0.15s ease, transform 0.05s ease; */
+}
+
+.ScoreList .btn-delete:hover {
+  background: #dc2626;
+}
+
+.ScoreList .btn-delete:active {
+  transform: translateY(1px);
+}
+
+/* 반응형: 작은 화면에서 셀 패딩 축소 */
+@media (max-width: 480px) {
+  .ScoreList thead th,
+  .ScoreList tbody td {
+    padding: 8px;
+    font-size: 13px;
+  }
+}
