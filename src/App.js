@@ -3,6 +3,7 @@ import "./App.css";
 import Header from "./components/Header";
 import ScoreInput from "./components/ScoreInput";
 import ScoreList from "./components/ScoreList";
+import TestUseReducer from "./components/TestUseReducer";
 
 const mockDate = [
   { id: 1, name: "홍길동", math: 80, eng: 40, sci: 70, avg: 63.33 },
@@ -35,6 +36,7 @@ function App() {
 
   return (
     <div className="App">
+      <TestUseReducer />
       <Header />
       <ScoreInput onCreate={onCreate} />
       <ScoreList scores={scores} onDelete={onDelete} />
