@@ -17,7 +17,11 @@ const ScoreList = ({ scores, onDelete }) => {
             </tr>
           </thead>
           <tbody>
-            <ScoreItem scores={scores} onDelete={onDelete} />
+            {/* <ScoreItem scores={scores} onDelete={onDelete} /> */}
+            {/* ScoreItem에 단일 객체만 넘겨주는 것이 더 좋음 (List는 "목록 관리", Item은 "한 행 표현") */}
+            {scores.map((score) => (
+              <ScoreItem key={score.id} score={score} onDelete={onDelete} />
+            ))}
           </tbody>
         </table>
       </div>

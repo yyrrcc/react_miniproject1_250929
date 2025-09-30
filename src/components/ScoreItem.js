@@ -1,9 +1,19 @@
 import "./css/ScoreList.css";
 
-const ScoreItem = ({ scores, onDelete }) => {
+const ScoreItem = ({ score, onDelete }) => {
   return (
     <>
-      {scores.map((it) => [
+      <tr>
+        <td>{score.name}</td>
+        <td>{score.math}</td>
+        <td>{score.eng}</td>
+        <td>{score.sci}</td>
+        <td>{score.avg}</td>
+        <td>
+          <button onClick={() => onDelete(score.id)}>삭제</button>
+        </td>
+      </tr>
+      {/* {scores.map((it) => (
         <tr key={it.id}>
           <td>{it.name}</td>
           <td>{it.math}</td>
@@ -13,8 +23,8 @@ const ScoreItem = ({ scores, onDelete }) => {
           <td>
             <button onClick={() => onDelete(it.id)}>삭제</button>
           </td>
-        </tr>,
-      ])}
+        </tr>
+      ))} */}
     </>
   );
 };

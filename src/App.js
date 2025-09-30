@@ -10,12 +10,12 @@ const mockDate = [
 ];
 
 function App() {
-  const idRef = useRef(0); // 기본키 id값
+  const idRef = useRef(2); // 기본키 id값
   const [scores, setScores] = useState(mockDate);
 
   // 성적추가함수
   const onCreate = (name, math, eng, sci, avg) => {
-    // input 폼에서 받아온 새 객체
+    // input 폼에서 받아온 새 객체 (변수 이름과 프로퍼티 이름이 같다면 math : math 생략가능)
     const newScore = {
       id: idRef.current,
       name,
